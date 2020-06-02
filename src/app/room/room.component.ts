@@ -11,8 +11,8 @@ import { Room } from '../models/room';
 export class RoomComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   roomDetails:Room;
-  setTemp(){return {type:"temparature", value:30, time:'13:30'}};
-  setHumidity(){ return {type:"humidity", value:50, time:'13:30'}};
+  setTemp(){return {type:"temparature", value:30, time:'13:30', date:new Date('05, 06, 2020')}};
+  setHumidity(){ return {type:"humidity", value:50, time:'13:30',  date:new Date('05, 06, 2020')}};
   constructor(private route: ActivatedRoute, private bs: BuildingService) { }
 
   ngOnInit() {

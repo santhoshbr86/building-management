@@ -1,8 +1,8 @@
  <footer class="card" [ngSwitch]="setEvent.type">
           <div class="card-body"  *ngSwitchCase="'temparature'">
-              set {{setEvent.type}} to {{setEvent.value}}<sup>0</sup> at {{setEvent.time}}
+            <img src="../../assets/images/temp.png" />set {{setEvent.type}} to {{setEvent.value}}<sup>0</sup> at {{setEvent.time}} {{setEvent.date | date:'dd/MM/yyyy'}}
           </div>
           <div class="card-body"  *ngSwitchCase="'humidity'">
-              set {{setEvent.type}} to {{setEvent.value}}<sup>%</sup> at {{setEvent.time}}
+             <img src="../../assets/images/humidity.png" />set {{setEvent.type}} to {{setEvent.value}}<sup>%</sup> at {{setEvent.time}} {{setEvent.date | date:'dd/MM/yyyy'}}
           </div>
 </footer>

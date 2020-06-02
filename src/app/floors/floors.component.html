@@ -2,15 +2,20 @@
     <div class="col">
     <h1>Floor Details</h1>
     <ng-template [ngIf]="floorDetails">
-        <div class="card" *ngFor="let f of floorDetails">
-                <div class="card-body">
-                    {{f.name}}<sup>st</sup> Floor
+        <div  *ngFor="let f of floorDetails">
+                
+                    <!-- {{f.name}}<sup>st</sup> Floor -->
                     <section class="row">
-                        <div  col="4" *ngFor="let r of f.rooms">
-                                <a [routerLink]="['/room', r.id]" class="btn btn-dark">{{r.id}} Room Details</a>
+                        <div class="card col-3" *ngFor="let r of f.rooms" (click)="gotoRoom(r)">
+                        <img class="card-img-top" src="../../assets/images/human1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Room {{r.id}}</h5>
+                            <p class="card-text">Number of people:{{r.id}}</p>
+                            <!-- <a [routerLink]="['/room', r.id]" class="btn btn-dark">Room Details</a> -->
                         </div>
-                </section>
-                </div>
+                        </div>
+                    </section>
+                
         </div>
         
     </ng-template>

@@ -9,7 +9,7 @@ import { Floor } from '../models/floor';
 })
 export class FloorsComponent implements OnInit {
   floorDetails:Floor[]=[];
-  constructor(private route: ActivatedRoute, private bs: BuildingService) { }
+  constructor(private route: ActivatedRoute, private bs: BuildingService, private router: Router) { }
 
   ngOnInit() {
      this.route.params.subscribe(params => {
@@ -17,6 +17,9 @@ export class FloorsComponent implements OnInit {
         this.floorDetails = d;
        });
     });
+  }
+  gotoRoom(r){
+    this.router.navigate(['/room', r.id]);
   }
 
 }
