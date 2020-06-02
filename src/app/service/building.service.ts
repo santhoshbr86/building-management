@@ -22,7 +22,7 @@ export class BuildingService {
   }
   getFloorDetails(param):Observable<Floor[]>{
     return this.http.get<Floor[]>('/assets/resources/floor.json').pipe(
-     map(data => data)
+     map(data => data.filter(fl => fl.name == param.num))
     );
   }
 }
