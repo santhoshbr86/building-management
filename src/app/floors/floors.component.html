@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col">
+    <h1>Floor Details</h1>
+    <ng-template [ngIf]="floorDetails">
+        <div class="card" *ngFor="let f of floorDetails">
+                <div class="card-body">
+                    {{f.name}}<sup>st</sup> Floor
+                    <section class="row">
+                        <div  col="4" *ngFor="let r of f.rooms">
+                                <a [routerLink]="['/room', r.id]" class="btn btn-dark">{{r.id}} Room Details</a>
+                        </div>
+                </section>
+                </div>
+        </div>
+        
+    </ng-template>
+</div>
+</div>

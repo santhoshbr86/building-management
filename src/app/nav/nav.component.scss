@@ -1,0 +1,22 @@
+$white:#fff;
+.sideNav{
+    min-height: 600px;
+    h4{
+        padding:40px 0 20px;
+        color:$white;
+        font-size:1rem;
+        font-weight: 600;
+    }
+    ul li{
+        text-transform: capitalize;
+        color:$white;
+        a{
+            color:$white;
+            padding-top:0;
+            padding-bottom: 0;
+          &:hover{
+              color:#ff2677;
+          }  
+        }
+    }
+}

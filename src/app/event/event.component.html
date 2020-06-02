@@ -1,0 +1,8 @@
+ <footer class="card" [ngSwitch]="setEvent.type">
+          <div class="card-body"  *ngSwitchCase="'temparature'">
+              set {{setEvent.type}} to {{setEvent.value}}<sup>0</sup> at {{setEvent.time}}
+          </div>
+          <div class="card-body"  *ngSwitchCase="'humidity'">
+              set {{setEvent.type}} to {{setEvent.value}}<sup>%</sup> at {{setEvent.time}}
+          </div>
+</footer>

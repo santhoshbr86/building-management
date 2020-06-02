@@ -1,0 +1,22 @@
+<nav class="sideNav">
+    <h4><img src="../../assets/images/home.png"  width="24" height="24"/> Smart Home</h4>
+<ul  class="nav flex-column">
+  <li class="nav-tem"><a href="#">Home</a></li>
+  <li>
+<ng-template [ngIf]="building">
+    <ul  class="nav flex-column" *ngFor="let b of building">  
+     <li class="nav-item">Building:{{b.name}}</li>
+      <ul class="nav flex-column" *ngFor="let floor of b.floorDetails">
+          <li class="nav-item"> <a [routerLink]="['/floor', floor.name]">floor{{floor.name}}</a>
+            <ul class="nav flex-column">
+                <li class="nav-item" *ngFor="let room of floor.rooms">
+                     <a class="nav-link" [routerLink]="['/room', room.id]">room{{room.id}}</a>
+                </li>
+            </ul>
+        </li>
+      </ul>
+    </ul>
+</ng-template>
+  </li>
+</ul>
+</nav>

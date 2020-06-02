@@ -1,0 +1,55 @@
+<header class="header">
+    <h1 class="pageTitle">Room</h1>
+</header>
+<ng-template [ngIf]="roomDetails">
+  <section class="row">
+  <div class="col-sm-6">
+  <div class="card">
+     <div class="card-body">
+      <h5 class="card-title">Temparature</h5>
+        <circle-progress
+        [percent]="roomDetails.temparature"
+        [radius]="100"
+        [outerStrokeWidth]="12"
+        [innerStrokeWidth]="6"
+        [outerStrokeColor]="'#ff2677'"
+        [innerStrokeColor]="'#ff2677'"
+        [animation]="true"
+        [units]="'O'"
+        [unitsFontSize]="'14'"
+        [titleFontSize]="'40'"
+        [titleFontWeight]="'600'"
+        [showSubtitle]="false"
+        [animationDuration]="300"
+      ></circle-progress>
+      <app-event [setEvent]="setTemp()"></app-event>
+      </div>
+    </div>
+</div>
+<div class="col-sm-6">
+   
+<div class="card">
+   <div class="card-body">
+        <h5 class="card-title">Humidity</h5>
+        <circle-progress
+        [percent]="roomDetails.humidity"
+        [radius]="100"
+        [outerStrokeWidth]="12"
+        [innerStrokeWidth]="6"
+        [outerStrokeColor]="'#27b9e9'"
+        [innerStrokeColor]="'#27b9e9'"
+        [unitsFontSize]="'14'"
+        [titleFontSize]="'40'"
+        [titleFontWeight]="'600'"
+        [showSubtitle]="false"
+        [animationDuration]="300"
+        [animation]="true"
+        [animationDuration]="300"
+      ></circle-progress>
+     <app-event [setEvent]="setHumidity()"></app-event>
+  </div>
+  </div>
+  </div>
+  </section>
+  
+</ng-template>

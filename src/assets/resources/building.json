@@ -1,0 +1,21 @@
+[
+{
+    "name":"Xyz",
+     "floorDetails":[
+        {
+            "name":"1",
+            "rooms":[
+              {"id":"1","temparature":23, "humidity":40 },
+              {"id":"2","temparature":25, "humidity":40 }
+              ]
+        },
+        {
+            "name":"2",
+            "rooms":[
+              {"id":"3","temparature":24, "humidity":40 },
+              {"id":"4","temparature":26, "humidity":40 }
+              ]
+        }
+     ]
+}
+]
