@@ -1,0 +1,11 @@
+<header class="header">
+    <div class="col">
+          <h1>Floor Details</h1>
+    </div>
+</header>
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+<ng-template [ngIf]="floorDetails">
+       <div  *ngFor="let f of floorDetails">
+        <app-widget [floor]="f"></app-widget>
+    </div>
+</ng-template>
