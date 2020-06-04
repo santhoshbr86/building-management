@@ -9,6 +9,7 @@ import { Floor } from '../../models/floor';
 })
 export class FloorComponent implements OnInit {
   floorDetails:Floor[]=[];
+  breadcrumb:any;
   constructor(private route: ActivatedRoute, private bs: BuildingService, private router: Router) { }
 
   ngOnInit() {

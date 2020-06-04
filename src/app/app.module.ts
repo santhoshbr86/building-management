@@ -11,7 +11,7 @@ import { BuildingService } from './service/building.service';
 // import { RoomComponent } from './room/room.component';
 import { FloorsModule  } from './floors/floors.module';
 import { HomeComponent } from './home/home.component';
-
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +23,12 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     RouterModule.forRoot([]),
     HttpClientModule,
+    SharedModule,
     RouterTestingModule
   ],
   providers: [BuildingService],
   bootstrap: [AppComponent],
+  entryComponents:[],
   exports:[ NavComponent]
   })
 export class AppModule { }
