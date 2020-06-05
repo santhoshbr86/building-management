@@ -19,7 +19,7 @@ import { SharedModule } from './shared/shared.module';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     RouterModule.forRoot([]),
     HttpClientModule,

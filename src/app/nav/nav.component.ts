@@ -7,7 +7,7 @@ import { Building } from "../models/building";
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  private building:Building[] = [];
+  public building:Building[] = [];
 
   constructor(private bs: BuildingService) { }
 
